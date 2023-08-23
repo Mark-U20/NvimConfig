@@ -20,8 +20,10 @@ vim.opt.expandtab = true
 
 -- whichkey setup
 local wk = require("which-key")
+
 wk.register({
   h = {":nohlsearch<CR>", "Highlight toggle"},
+  e= {":NvimTreeToggle<CR>", "Open Explorer"},
   x = {":bdelete<cr>", "Close buffer"},
   b = {
   },
@@ -38,7 +40,7 @@ wk.register({
     ["1"] = "which_key_ignore",                           -- special label to hide it in the popup
     b = { function() print("bar") end, "Foobar" }         -- you can also pass functions!
   },
-  w = {":w<CR>", "Write File"}
+  w = {":w<CR>", "Write File"},
 }, { prefix = "<leader>" })
 
 -- buffers

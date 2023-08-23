@@ -1,2 +1,4 @@
--- vim.o.termguicolors = true
--- vim.cmd [[ colorscheme catppuccin]]
+vim.o.termguicolors = true
+vim.cmd [[ colorscheme catppuccin]]
+
+

@@ -53,7 +53,9 @@ local plugins = {
       -- add any options here
     },
     lazy = false,
-  }
+  },
+  "xiyaowong/transparent.nvim",
+  "folke/tokyonight.nvim",
 }
 
 

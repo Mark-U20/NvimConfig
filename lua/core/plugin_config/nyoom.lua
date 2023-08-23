@@ -1,2 +1,4 @@
-vim.o.termguicolors = true
-vim.cmd [[ colorscheme oxocarbon]]
+-- vim.o.termguicolors = true
+-- vim.cmd [[
+--   silent! colorscheme oxocarbon
+-- ]]

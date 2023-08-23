@@ -33,3 +33,6 @@ vim.api.nvim_set_keymap("n", "<C-L>", "<C-W>l", { noremap = true, silent = true 
 -- Map <Leader> + w to save the current file
 vim.api.nvim_set_keymap("n", "<Leader>w", ":w<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>f", ":lua vim.lsp.buf.format()<CR>", { noremap = true, silent = true })
+
+
+vim.keymap.set("n", "<leader>Tt", ":TransparentToggle<CR>")

@@ -34,7 +34,8 @@ local plugins = {
     tag = '0.1.2',
     dependencies = { { 'nvim-lua/plenary.nvim' } },
   },
-  { 'akinsho/bufferline.nvim',
+  {
+    'akinsho/bufferline.nvim',
     version = "*",
     dependencies = 'nvim-tree/nvim-web-devicons'
   },
@@ -46,7 +47,13 @@ local plugins = {
   "rafamadriz/friendly-snippets",
   "onsails/lspkind.nvim",
   "jose-elias-alvarez/null-ls.nvim",
-
+  {
+    "numToStr/Comment.nvim",
+    opts = {
+      -- add any options here
+    },
+    lazy = false,
+  }
 }
 
 

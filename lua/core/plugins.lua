@@ -14,6 +14,9 @@ vim.opt.rtp:prepend(lazypath)
 
 
 local plugins = {
+  "williamboman/mason.nvim",
+  "williamboman/mason-lspconfig.nvim",
+  "neovim/nvim-lspconfig",
   "folke/which-key.nvim",
   "nyoom-engineering/oxocarbon.nvim",
   {
@@ -35,6 +38,13 @@ local plugins = {
     version = "*",
     dependencies = 'nvim-tree/nvim-web-devicons'
   },
+  "jiangmiao/auto-pairs",
+  "hrsh7th/nvim-cmp",
+  "hrsh7th/cmp-nvim-lsp",
+  "L3MON4D3/LuaSnip",
+  "saadparwaiz1/cmp_luasnip",
+  "rafamadriz/friendly-snippets",
+
 }
 
 local opts = {}

@@ -29,7 +29,10 @@ wk.register({
   },
   L = {
     name = "lsp",
-    f = {":lua vim.lsp.buf.format()<CR>", "Format file" },
+    f = {":lua vim.lsp.buf.format()<CR>", "Format File" },
+  },
+  T = {
+    t = {":TransparentToggle<CR>", "Transparent Toggle"},
   },
   f = {
     name = "file",                                        -- optional group name
@@ -47,9 +50,12 @@ wk.register({
 vim.keymap.set("n", "<S-l>", ":bnext<cr>")
 vim.keymap.set("n", "<S-h>", ":bprev<cr>")
 
+
 -- Rebind Ctrl + H to move left between splits
 vim.api.nvim_set_keymap("n", "<C-H>", "<C-W>h", { noremap = true, silent = true })
 -- Rebind Ctrl + L to move right between splits
 vim.api.nvim_set_keymap("n", "<C-L>", "<C-W>l", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-j>", "<C-W>j", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-k>", "<C-W>k", { noremap = true, silent = true })
 
 vim.keymap.set("n", "<leader>Tt", ":TransparentToggle<CR>")

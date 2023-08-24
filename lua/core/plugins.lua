@@ -84,6 +84,11 @@ local plugins = {
       require("todo-comments").setup()
     end,
   },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+  },
 }
 
 

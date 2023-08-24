@@ -22,17 +22,17 @@ vim.opt.expandtab = true
 local wk = require("which-key")
 
 wk.register({
-  h = {":nohlsearch<CR>", "Highlight toggle"},
-  e= {":NvimTreeToggle<CR>", "Open Explorer"},
-  x = {":bdelete<cr>", "Close buffer"},
+  h = { ":nohlsearch<CR>", "Highlight toggle" },
+  e = { ":NvimTreeToggle<CR>", "Open Explorer" },
+  x = { ":bdelete<cr>", "Close buffer" },
   b = {
   },
   L = {
     name = "lsp",
-    f = {":lua vim.lsp.buf.format()<CR>", "Format File" },
+    f = { ":lua vim.lsp.buf.format()<CR>", "Format File" },
   },
   T = {
-    t = {":TransparentToggle<CR>", "Transparent Toggle"},
+    t = { ":TransparentToggle<CR>", "Transparent Toggle" },
   },
   f = {
     name = "file",                                        -- optional group name
@@ -43,7 +43,33 @@ wk.register({
     ["1"] = "which_key_ignore",                           -- special label to hide it in the popup
     b = { function() print("bar") end, "Foobar" }         -- you can also pass functions!
   },
-  w = {":w<CR>", "Write File"},
+  w = { ":w<CR>", "Write File" },
+  g = {
+    name = "Git",
+    g = { "<cmd>lua require 'lvim.core.terminal'.lazygit_toggle()<cr>", "Lazygit" },
+    j = { "<cmd>lua require 'gitsigns'.next_hunk({navigation_message = false})<cr>", "Next Hunk" },
+    k = { "<cmd>lua require 'gitsigns'.prev_hunk({navigation_message = false})<cr>", "Prev Hunk" },
+    l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
+    p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
+    r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
+    R = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
+    s = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
+    u = {
+      "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
+      "Undo Stage Hunk",
+    },
+    o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
+    b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+    c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
+    C = {
+      "<cmd>Telescope git_bcommits<cr>",
+      "Checkout commit(for current file)",
+    },
+    d = {
+      "<cmd>Gitsigns diffthis HEAD<cr>",
+      "Git Diff",
+    },
+  },
 }, { prefix = "<leader>" })
 
 -- buffers

@@ -89,6 +89,8 @@ local plugins = {
     cmd = "Copilot",
     event = "InsertEnter",
   },
+  "tpope/vim-fugitive",
+  "lewis6991/gitsigns.nvim",
 }
 
 

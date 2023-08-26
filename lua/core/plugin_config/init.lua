@@ -17,4 +17,4 @@ require("core.plugin_config.transparent")
 require("core.plugin_config.tokyonight")
 require("core.plugin_config.copilot")
 require("core.plugin_config.gitsigns")
-
+require("core.plugin_config.nvim-ufo")

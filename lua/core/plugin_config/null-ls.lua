@@ -13,7 +13,9 @@ local sources = {
 	formatting.autopep8,
 	formatting.stylua,
   formatting.jsonls,
+  formatting.yamlls,
 }
+
 
 null_ls.setup({
 	sources = sources,

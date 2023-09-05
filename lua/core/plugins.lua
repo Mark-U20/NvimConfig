@@ -124,6 +124,8 @@ local plugins = {
     'kevinhwang91/nvim-ufo',
     dependencies = 'kevinhwang91/promise-async'
   },
+  'MunifTanjim/prettier.nvim',
+  'glepnir/lspsaga.nvim',
 }
 
 

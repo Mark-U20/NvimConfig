@@ -53,6 +53,13 @@ require("lspconfig").rust_analyzer.setup {
     }
   }
 }
+--setup for css lsp prettier for fomratting
+require("lspconfig").cssls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "css", "scss", "less" },
+}
+
 
 require("lspconfig").yamlls.setup {
   on_attach = on_attach,

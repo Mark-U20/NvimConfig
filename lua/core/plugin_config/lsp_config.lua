@@ -53,6 +53,12 @@ require("lspconfig").rust_analyzer.setup {
     }
   }
 }
+
+require("lspconfig").eslint.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+}
 --setup for css lsp prettier for fomratting
 require("lspconfig").cssls.setup {
   on_attach = on_attach,

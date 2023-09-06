@@ -126,6 +126,7 @@ local plugins = {
   },
   'MunifTanjim/prettier.nvim',
   'glepnir/lspsaga.nvim',
+  'famiu/bufdelete.nvim',
 }
 
 

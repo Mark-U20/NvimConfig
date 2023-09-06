@@ -27,7 +27,7 @@ wk.register({
     ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
     -- ["c"] = { ":BufferKill<CR>", "Close Buffer" },
     e = { ":NvimTreeToggle<CR>", "Open Explorer" },
-    x = { ":bdelete<cr>", "Close buffer" },
+    x = { ":Bdelete<cr>", "Close buffer" },
     d = {
       name = "Debug",
       t = { ":lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },

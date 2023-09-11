@@ -14,6 +14,7 @@
 1. Install Mingw using:
   - Using Pacman: `sudo pacman -S mingw`
   - Using Paru: `paru -S mingw`
+2. Install neovim using `sudo pacman -S neovim` or `paru -S neovim`
 2. Navigate to `~./config`
 3. Clone this repository
 4. rename the directory of the cloned repository to `nvim`

@@ -1,7 +1,14 @@
 local fterm = require("FTerm")
 
+
+local powershell_cmd = "powershell" -- Command for PowerShell
+local default_shell_cmd = vim.o.shell -- Default shell command
+
+-- Check if PowerShell is available
+local powershell_available = vim.fn.executable(powershell_cmd) == 1
+
 fterm.setup({
- {
+ 
     ---Filetype of the terminal buffer
     ---@type string
     ft = 'FTerm',
@@ -9,7 +16,9 @@ fterm.setup({
     ---Command to run inside the terminal
     ---NOTE: if given string[], it will skip the shell and directly executes the command
     ---@type fun():(string|string[])|string|string[]
-    cmd = os.getenv('SHELL'),
+
+    -- cmd = vim.o.shell,
+    cmd = powershell_available and powershell_cmd or default_shell_cmd,
 
     ---Neovim's native window border. See `:h nvim_open_win` for more configuration options.
     border = 'single',
@@ -61,5 +70,5 @@ fterm.setup({
     ---See `:h jobstart-options`
     ---@type fun()|nil
     on_stderr = nil,
-}
+
 })

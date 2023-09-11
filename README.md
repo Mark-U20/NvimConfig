@@ -17,9 +17,9 @@
 2. Install neovim using `sudo pacman -S neovim` or `paru -S neovim`
 2. Navigate to `~./config`
 3. Clone this repository
-4. rename the directory of the cloned repository to `nvim`
+4. Rename the newly cloned repository's file to "nvim".
 
 # Notes
 
-I've found that Neovim works best with the Alacritty terminal emulator. It tends to stutter less and experience less lag when scrolling through large files.
+I've found that Neovim works best with the Alacritty terminal emulator. It tends to stutter less and I experience less lag when scrolling through large files.
 

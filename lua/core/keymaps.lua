@@ -144,6 +144,17 @@ wk.register({
       K = { ":lua require('ufo').peekFoldedLinesUnderCursor()<cr>", "Peek Folded Lines Under Cursor" },
     },
     -- keymap for buf hover
+    b = {
+      name = "Buf",
+      v = { ":vsplit<cr>", "Vertical Split" },
+      h = { ":split<cr>", "Horizontal Split" },
+    },
+    t = {
+      name = "Terminal",
+      t = { ":ToggleTerm<cr>", "Toggle Terminal" },
+      n = { ":ToggleTerm<cr>", "New Terminal" },
+      c = { ":ToggleTerm<cr>", "Close Terminal" },
+    },
 
   },
   { prefix = "<leader>" })
@@ -161,6 +172,12 @@ vim.api.nvim_set_keymap("n", "<C-H>", "<C-W>h", { noremap = true, silent = true 
 vim.api.nvim_set_keymap("n", "<C-L>", "<C-W>l", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-j>", "<C-W>j", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-k>", "<C-W>k", { noremap = true, silent = true })
+-- size of split
+vim.keymap.set("n", "<C-Left>", ":vertical resize +3<CR>")
+vim.keymap.set("n", "<C-Right>", ":vertical resize -3<CR>")
+vim.keymap.set("n", "<C-Up>", ":resize +3<CR>")
+vim.keymap.set("n", "<C-Down>", ":resize -3<CR>")
 
 vim.keymap.set("n", "<leader>Tt", ":TransparentToggle<CR>")
+
 

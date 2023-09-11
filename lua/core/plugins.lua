@@ -127,6 +127,8 @@ local plugins = {
   'MunifTanjim/prettier.nvim',
   'glepnir/lspsaga.nvim',
   'famiu/bufdelete.nvim',
+  'mustache/vim-mustache-handlebars',
+  {'akinsho/toggleterm.nvim', version = "*", config = true}
 }
 
 

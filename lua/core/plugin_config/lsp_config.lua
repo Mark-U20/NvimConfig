@@ -23,6 +23,13 @@ require("lspconfig").jsonls.setup {
   capabilities = capabilities,
 }
 
+require("lspconfig").glint.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "hbs", "handlebars", "html.handlebars" },
+}
+
+
 require("lspconfig").tsserver.setup {
   on_attach = on_attach,
   capabilities = capabilities,

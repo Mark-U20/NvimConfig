@@ -1,15 +1,24 @@
 # Installation
+
 ## Windows
- - install mingw using "scoop install mingw"
- - install neovim using "scoop install neovim"
- - then go to your "~//../../AppData/Local/" directory and clone the repository
- - and finally rename that newly cloned repositories file name to "nvim"
- - now you should have "~//../../AppData/Local/nvim/"
 
- ## Arch Linux
- - install mingw using: "sudo pacman -S mingw", or for paru: "paru -S mingw"
+1. Install MinGW using `scoop install mingw`.
+2. Install Neovim using `scoop install neovim`.
+3. Navigate to your `~//../../AppData/Local/` directory.
+4. Clone the repository.
+5. Rename the newly cloned repository's file to "nvim".
+6. Now, you should have `~//../../AppData/Local/nvim/`.
 
+## Arch Linux
 
+1. Install Mingw using:
+  - Using Pacman: `sudo pacman -S mingw`
+  - Using Paru: `paru -S mingw`
+2. Navigate to `~./config`
+3. Clone this repository
+4. rename the directory of the cloned repository to `nvim`
 
- #Notes
- - I find that neovim works best with the Alacritty terminal emulator because it stutters less and does not lag as much when scrolling large files
+# Notes
+
+I've found that Neovim works best with the Alacritty terminal emulator. It tends to stutter less and experience less lag when scrolling through large files.
+

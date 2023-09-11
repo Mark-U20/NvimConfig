@@ -180,4 +180,6 @@ vim.keymap.set("n", "<C-Down>", ":resize -3<CR>")
 
 vim.keymap.set("n", "<leader>Tt", ":TransparentToggle<CR>")
 
+vim.keymap.set('n', '<A-i>', '<CMD>lua require("FTerm").toggle()<CR>')
+vim.keymap.set('t', '<A-i>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
 

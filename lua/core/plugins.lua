@@ -128,7 +128,8 @@ local plugins = {
   'glepnir/lspsaga.nvim',
   'famiu/bufdelete.nvim',
   'mustache/vim-mustache-handlebars',
-  {'akinsho/toggleterm.nvim', version = "*", config = true}
+  {'akinsho/toggleterm.nvim', version = "*", config = true},
+  'numToStr/FTerm.nvim',
 }
 
 

@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "tsserver", "jsonls", "yamlls", "spectral" }
+  ensure_installed = { "lua_ls", "tsserver", "jsonls", "yamlls", "spectral", "tailwindcss" }
 })
 
 local on_attach = function(_, _)
@@ -35,6 +35,12 @@ require("lspconfig").tsserver.setup {
   capabilities = capabilities,
   filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
 }
+require("lspconfig").tailwindcss.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "css", "scss", "less" },
+}
+
 
 require("lspconfig").rust_analyzer.setup {
   capabilities = capabilities,

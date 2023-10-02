@@ -45,8 +45,6 @@ wk.register({
       q = { ":lua require'dap'.close()<cr>", "Quit" },
       U = { ":lua require'dapui'.toggle({reset = true})<cr>", "Toggle UI" },
     },
-    b = {
-    },
     L = {
       name = "lsp",
       f = { ":lua vim.lsp.buf.format()<CR>", "Format File" },
@@ -73,20 +71,10 @@ wk.register({
         "Workspace Symbols",
       },
       e = { "<cmd>Telescope quickfix<cr>", "Telescope Quickfix" },
-
-
     },
     T = {
+      name = "Transparent",
       t = { ":TransparentToggle<CR>", "Transparent Toggle" },
-    },
-    f = {
-      name = "file",                                        -- optional group name
-      f = { "<cmd>Telescope find_files<cr>", "Find File" }, -- create a binding with label
-      -- r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File", noremap=false, buffer = 123 }, -- additional options for creating the keymap
-      n = { "New File" },                                   -- just a label. don't create any mapping
-      e = "Edit File",                                      -- same as above
-      ["1"] = "which_key_ignore",                           -- special label to hide it in the popup
-      b = { function() print("bar") end, "Foobar" }         -- you can also pass functions!
     },
     w = { ":w<CR>", "Write File" },
     g = {
@@ -165,7 +153,6 @@ vim.keymap.set("n", "<S-l>", ":bnext<cr>")
 vim.keymap.set("n", "<S-h>", ":bprev<cr>")
 
 
-
 -- Rebind Ctrl + H to move left between splits
 vim.api.nvim_set_keymap("n", "<C-H>", "<C-W>h", { noremap = true, silent = true })
 -- Rebind Ctrl + L to move right between splits
@@ -182,4 +169,3 @@ vim.keymap.set("n", "<leader>Tt", ":TransparentToggle<CR>")
 
 vim.keymap.set('n', '<A-i>', '<CMD>lua require("FTerm").toggle()<CR>')
 vim.keymap.set('t', '<A-i>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
-

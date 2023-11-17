@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "tsserver", "jsonls", "yamlls", "spectral", "tailwindcss" }
+  ensure_installed = { "lua_ls", "tsserver", "jsonls", "yamlls", "spectral", "tailwindcss", "html" }
 })
 
 local on_attach = function(_, _)
@@ -28,6 +28,11 @@ require("lspconfig").glint.setup {
   capabilities = capabilities,
   filetypes = { "hbs", "handlebars", "html.handlebars" },
 }
+require("lspconfig").html.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "html" },
+})
 
 
 require("lspconfig").tsserver.setup {
@@ -40,6 +45,12 @@ require("lspconfig").tailwindcss.setup {
   capabilities = capabilities,
   filetypes = { "css", "scss", "less" },
 }
+--create one for bash
+ require("lspconfig").bashls.setup {
+   on_attach = on_attach,
+   capabilities = capabilities,
+   filetypes = { "sh", "zsh" },
+ }
 
 
 require("lspconfig").rust_analyzer.setup {

@@ -1,24 +1,28 @@
 local null_ls_status_ok, null_ls = pcall(require, "null_ls")
 if not null_ls_status_ok then
-	return
+  return
 end
 
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 
 local sources = {
-	formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
-	formatting.black.with({ extra_args = { "--fast" } }),
-	formatting.eslint_d,
-	formatting.autopep8,
-	formatting.stylua,
+  formatting.prettier.with({
+    extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
+    filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact", "css", "scss", "less", "json",
+      "yaml", "markdown", "html" }
+  }),
+  formatting.black.with({ extra_args = { "--fast" } }),
+  formatting.eslint_d,
+  formatting.autopep8,
+  formatting.stylua,
   formatting.jsonls,
   formatting.yamlls,
 }
 
 
 null_ls.setup({
-	sources = sources,
+  sources = sources,
 })
 -- local status, null_ls = pcall(require, "null-ls")
 -- if (not status) then return end
@@ -37,7 +41,7 @@ null_ls.setup({
 -- null_ls.setup {
 --   sources = {
 --     null_ls.builtins.formatting.prettierd,
---     -- eslint 
+--     -- eslint
 --     null_ls.builtins.formatting.eslint_d.with({
 --       command = "eslint_d",
 --       args = { "--stdin", "--stdin-filename", "$FILENAME" },

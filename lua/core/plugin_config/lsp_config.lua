@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "tsserver", "jsonls", "yamlls", "spectral", "tailwindcss", "html" }
+  ensure_installed = { "lua_ls", "tsserver", "jsonls", "yamlls", "spectral", "tailwindcss", "html", "prettier" }
 })
 
 local on_attach = function(_, _)
@@ -34,17 +34,24 @@ require("lspconfig").html.setup({
   filetypes = { "html" },
 })
 
+require("lspconfig").prettier.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "css, scss" },
+})
+
+
 
 require("lspconfig").tsserver.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
 }
-require("lspconfig").tailwindcss.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "css", "scss", "less" },
-}
+-- require("lspconfig").tailwindcss.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+--   filetypes = { "css", "scss", "less" },
+-- }
 --create one for bash
  require("lspconfig").bashls.setup {
    on_attach = on_attach,
@@ -84,11 +91,11 @@ require("lspconfig").eslint.setup {
   filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
 }
 --setup for css lsp prettier for fomratting
-require("lspconfig").cssls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = { "css", "scss", "less" },
-}
+-- require("lspconfig").cssls.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+--   filetypes = { "css", "scss", "less" },
+-- }
 
 
 require("lspconfig").yamlls.setup {

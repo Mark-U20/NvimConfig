@@ -14,7 +14,16 @@ vim.opt.rtp:prepend(lazypath)
 
 
 local plugins = {
-  "williamboman/mason.nvim",
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "clangd",
+        "clang-format",
+        "codelldb",
+      }
+    }
+  },
   "williamboman/mason-lspconfig.nvim",
   "neovim/nvim-lspconfig",
   {
@@ -128,7 +137,7 @@ local plugins = {
   'glepnir/lspsaga.nvim',
   'famiu/bufdelete.nvim',
   'mustache/vim-mustache-handlebars',
-  {'akinsho/toggleterm.nvim', version = "*", config = true},
+  { 'akinsho/toggleterm.nvim', version = "*", config = true },
   'numToStr/FTerm.nvim',
 }
 

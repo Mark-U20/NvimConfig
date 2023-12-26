@@ -18,6 +18,7 @@ local sources = {
   formatting.stylua,
   formatting.jsonls,
   formatting.yamlls,
+  null_ls.builtins.formatting.clang_format,
 }
 
 
